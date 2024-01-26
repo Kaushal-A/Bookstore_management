@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "5f4f2c47-1144-4834-a77c-20d7ff47fb3e",
+		"name": "Bookstore Management API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32586506"
+	},
+	"item": [
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "[http://localhost:8000/api/add_book/](http://localhost:8000/api/add_book/)\n\nAdd a raw JSON in this format to add a new book.\n\n{ \"title\": \"Title1\", \"author\": \"Author1\", \"isbn\": \"753159\", \"price\": 2.99, \"quantity\": 3}"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "http://localhost:8000/api/get_all_books/  \nThis endpoint will return all the books"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book by ISBN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "[http://localhost:8000/api/get_book_by_isbn/{ISBN_Number}](https://StartFragmenthttp://localhost:8000/api/get_book_by_isbn/{ISBN)"
+			},
+			"response": []
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "http://localhost:8000/api/update_book/1234567890/",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/update_book/1234567890/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_book",
+						"1234567890",
+						""
+					]
+				},
+				"description": "Use basic authorization"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "[http://localhost:8000/api/delete_book/{ISBN_Number}](http://localhost:8000/api/delete_book/1234567890/EndFragment)\n\nUse basic authorization."
+			},
+			"response": []
+		}
+	]
+}
